@@ -14,5 +14,6 @@ public class TestSpring {
         System.out.println(testBean.getName());
 
         context.close();
+
     }
 }
