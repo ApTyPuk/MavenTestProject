@@ -14,9 +14,9 @@ public class DBConnection {
     public DBConnection() {
 
         try {
-            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
             Driver driver = new FabricMySQLDriver();
-            DriverManager.deregisterDriver(driver);
+            DriverManager.registerDriver(driver);
+            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (SQLException e) {
             e.printStackTrace();
         }
